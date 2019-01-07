@@ -1,0 +1,456 @@
+/* -------------------------------------------------------------- */
+/* ------------------------- Indispensables -------------------- */
+/* -------------------------------------------------------------- */
+@charset"UTF-8";
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* clearfix */
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+body {
+	margin: 0;
+	width: 100vw;
+	overflow-x: hidden;
+	font-family: "Tilde", sans-serif;
+}
+
+.wrapper {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.container {
+	height: 100vh;
+	width: 100vw;
+	padding: 0 40px 40px 40px;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Fonts */
+@font-face {
+	font-family: "Tilde";
+	src: url("/fonts/tilde-regular.woff2") format("woff2"),
+		url("/fonts/tilde-regular.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Tilde-bold";
+	src: url("/fonts/tilde-bold.woff2") format("woff2"),
+		url("/fonts/tilde-bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Tilde-light";
+	src: url("/fonts/tilde-light.woff2") format("woff2"),
+		url("/fonts/tilde-light.woff") format("woff");
+}
+
+/* -------------------------------------------------------------- */
+/* ------------------------- Header -------------------- */
+/* -------------------------------------------------------------- */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 40px;
+	width: inherit;
+	padding: 0 40px;
+	position: fixed;
+	background-color: #fff;
+	z-index: 3;
+}
+
+a.logo_accueil {
+	display: block;
+}
+
+a.logo_accueil img.logo {
+	height: 30px;
+	width: auto;
+}
+
+/* -------------------------------------------------------------- */
+/* ------------------------- Navigation principale -------------------- */
+/* -------------------------------------------------------------- */
+nav#navbar {
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+}
+
+nav#navbar div {
+	margin-left: 20px;
+	position: relative;
+}
+
+nav#navbar div span {
+	width: 0px;
+	height: 2px;
+	display: block;
+	background: #000;
+	position: absolute;
+	bottom: 7px;
+	left: -5px;
+	transition: width 1s;
+}
+
+nav#navbar div:hover span {
+	width: 85px;
+}
+
+/* Réseaux sociaux */
+ul.contact-alice {
+	position: fixed;
+	top: 50%;
+	right: 10px;
+}
+
+ul.contact-alice li a {
+	height: 20px;
+	width: 20px;
+	display: block;
+}
+
+ul.contact-alice li a#in {
+	background: transparent url(../img/linkedin-.svg) no-repeat center;
+	background-size: 15px;
+}
+
+ul.contact-alice li a#mail {
+	background: transparent url(../img/at.svg) no-repeat center;
+	background-size: 15px;
+}
+
+/* -------------------------------------------------------------- */
+/* ------------------------- Section about -------------------- */
+/* -------------------------------------------------------------- */
+section#about {
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+}
+
+section#about div.container-text,
+section#about div.container-visuel {
+	width: 50vw;
+	background-color: #F8F8F8;
+	/* overflow: hidden; */
+}
+
+/* TEST */
+section#about div.container-text {
+	position: relative;
+	overflow: hidden;
+}
+
+section#about div.container-text div.test {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: black;
+	z-index: 1;
+	transform: translateX(0);
+	transition: 800ms;
+}
+
+/* Anim js */
+section#about.anim_test div.container-text div.test {
+	transform: translateX(-900px);
+}
+
+section#about.anim_test div.container-text div.text,
+section#about.anim_test div.container-visuel div.visuel {
+	transform: translateY(0);
+	transition-delay: 800ms;
+}
+
+section#about div.container-text div.test img.logo_center {
+	position: absolute;
+	z-index: 1;
+	height: 200px;
+	width: auto;
+	top: 50%;
+	left: 96%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+}
+
+section#about div.container-text div.text {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 50px;
+	height: 100%;
+	transform: translateY(700px);
+	transition: 0.5s;
+}
+
+section#about div.container-visuel {
+	/* overflow: hidden; */
+}
+
+section#about div.container-visuel div.visuel {
+	background: url(../img/about.png) no-repeat;
+	background-size: cover;
+	height: 100%;
+	transition: 1s;
+	transform: translateY(-900px);
+}
+
+div.container_cta {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+section#about a.download img {
+	height: 20px;
+	display: block;
+	margin-right: 10px;
+}
+
+section#about div.container-text h1 {
+	margin-bottom: 0;
+}
+
+/* -------------------------------------------------------------- */
+/* ------------------------- Section projets -------------------- */
+/* -------------------------------------------------------------- */
+section#project {
+	display: flex;
+}
+
+section#project div.description,
+section#project div.visuel_projects {
+	width: 50vw;
+	background-color: #F8F8F8;
+}
+
+section#project div.description {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 50px;
+}
+
+/* les projets */
+section#project div.visuel_projects {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	/* width: 50vw; */
+}
+
+/* Position des visuels du milieu de tous les projets */
+section#project div.visuel_projects div.container_projet div.visuel-middle {
+	height: 50%;
+	width: 70%;
+	top: 47%;
+	left: 10%;
+	position: absolute;
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+section#project div.visuel_projects div.container_projet div#p1-middle {
+	background: url(../img/p1_ctewind/MiddleDesign.png) no-repeat;
+	background-size: cover;
+	background-size: 100% auto;
+	z-index: 1;
+}
+
+section#project div.visuel_projects div#p2-middle {
+	background: url(../img/p2_clps/MiddleDesign.png) no-repeat;
+	background-size: cover;
+	background-size: 100% auto;
+	z-index: 1;
+}
+
+section#project div.visuel_projects div.container_projet.actif div.visuel-middle {
+	opacity: 1;
+	transition: opacity 1s;
+}
+
+section#project div.visuel_projects div.container_projet.actif div.visuel-left,
+section#project div.visuel_projects div.container_projet.actif div.visuel-right {
+	transform: translateX(0);
+}
+
+section#project div.visuel_projects div#p1-left {
+	background: url(../img/p1_ctewind/LeftDesign.png) no-repeat;
+	background-size: cover;
+	background-size: 100% auto;
+}
+
+section#project div.visuel_projects div#p1-right {
+	background: url(../img/p1_ctewind/RightDesign.png) no-repeat;
+	background-size: cover;
+	background-size: 100% auto;
+}
+
+section#project div.visuel_projects div#p2-left {
+	background: url(../img/p2_clps/LeftDesign.png) no-repeat;
+	background-size: cover;
+	background-size: 100% auto;
+}
+
+section#project div.visuel_projects div#p2-right {
+	background: url(../img/p2_clps/RightDesign.png) no-repeat;
+	background-size: cover;
+	background-size: 100% auto;
+}
+
+section#project div.visuel_projects div.visuel-left {
+	transform: translateX(-50vW);
+	transition: 2s;
+	height: 50%;
+	width: 70%;
+	position: absolute;
+	top: 75%;
+	left: 0%;
+	z-index: 2;
+}
+
+section#project div.visuel_projects div.visuel-right {
+	transform: translateX(50vW);
+	transition: 1.5s;
+	height: 50%;
+	width: 50%;
+	position: absolute;
+	top: 40%;
+	right: 0%;
+	z-index: 1;
+}
+
+section#project div.description h1 {
+	margin-bottom: 0;
+}
+
+section#project div.description_projet h2 {
+	text-transform: uppercase;
+	font-size: 12px;
+	padding: 0 0 40px 0;
+	font-weight: 100;
+}
+
+section#project div.description_projet h3,
+section#project div.description_projet p {
+	margin: 0;
+}
+
+section#project div.description_projet ul li {
+	margin: 20px 0;
+}
+
+section#project div.description_projet ul li div {
+	position: relative;
+}
+
+section#project div.description_projet ul li div span.select-project {
+	width: 0px;
+	height: 2px;
+	display: block;
+	background: #000;
+	position: absolute;
+	bottom: 10px;
+	left: -5px;
+	transition: width 1s;
+}
+
+section#project div.description_projet ul li div:hover span.select-project {
+	width: 100px;
+}
+
+section#project div.description_projet ul li h3 {
+	cursor: pointer;
+}
+
+section#project div.description_projet p {
+	opacity: 0;
+	font-style: italic;
+}
+
+section#project div.description_projet ul li.actif p {
+	opacity: 1;
+	transition: ease 0.3s;
+}
+
+/* Caractères spé */
+/* CTA - télécharger cv */
+a.cta_body {
+	background: #000;
+	color: #fff;
+	/* text-shadow: 1px 1px 0px #27F3EE; */
+	border: none;
+	padding: 5px 50px;
+	display: inline-block;
+	text-transform: uppercase;
+	transition: all 1s ease;
+	position: relative;
+	font-size: 18px;
+}
+
+a.cta_body:hover {
+	transition: all 0.7s ease;
+	background: transparent;
+	color: #000;
+}
+
+a.cta_body:hover:after {
+	transition: all 0.7s ease;
+	width: 100%;
+	left: 0;
+}
+
+a.cta_body:after {
+	position: absolute;
+	transition: all 0.7s ease;
+	content: '';
+	width: 0;
+	bottom: 0;
+	left: inherit;
+	right: 0;
+	height: 2px;
+	background: #FE2C55;
+	box-shadow: 0px 2px 0px #27F3EE;
+}
+
+/* trait sous les titres*/
+.trait_titre {
+	height: 3px;
+	position: relative;
+}
+
+.trait_titre span {
+	width: 800px;
+	height: 2px;
+	display: block;
+	background: #FE2C55;
+	position: absolute;
+	transition: width 0.7s;
+	z-index: 2;
+}
+
+.trait_titre span:nth-child(2) {
+	top: 2px;
+	background: #27F3EE;
+}
