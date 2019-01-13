@@ -260,85 +260,42 @@ section#project div.visuel_projects {
 	/* width: 50vw; */
 }
 
-/* Position des visuels du milieu de tous les projets */
-section#project div.visuel_projects div.container_projet div.visuel-middle {
-	height: 50%;
-	width: 70%;
-	top: 47%;
-	left: 10%;
+/* MODIF TEST */
+section#project div.visuel_projects div.container_projet {
 	position: absolute;
-	opacity: 0;
-	transition: opacity 1s;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	transform: rotateZ(-40deg);
 }
 
-section#project div.visuel_projects div.container_projet div#p1-middle {
-	background: url(../img/p1_ctewind/MiddleDesign.png) no-repeat;
-	background-size: cover;
-	background-size: 100% auto;
-	z-index: 1;
+section#project div.visuel_projects div.container_projet img {
+	width: 250px;
+	align-self: center;
+	padding: 0 10px;
+	filter: drop-shadow(-15px -10px 4px rgba(0, 0, 0, 0.1));
 }
 
-section#project div.visuel_projects div#p2-middle {
-	background: url(../img/p2_clps/MiddleDesign.png) no-repeat;
-	background-size: cover;
-	background-size: 100% auto;
-	z-index: 1;
+section#project div.visuel_projects div#target1 img:nth-child(1),
+section#project div.visuel_projects div#target2 img:nth-child(1),
+section#project div.visuel_projects div#target1 img:nth-child(3),
+section#project div.visuel_projects div#target2 img:nth-child(3) {
+	/* transition-timing-function: cubic-bezier(.17, .67, .83, .67); */
+	transform: translateY(-800px);
+	/* opacity: 0; */
 }
 
-section#project div.visuel_projects div.container_projet.actif div.visuel-middle {
-	opacity: 1;
-	transition: opacity 1s;
+section#project div.visuel_projects div#target1 img:nth-child(2),
+section#project div.visuel_projects div#target2 img:nth-child(2) {
+	transform: translateY(900px);
 }
 
-section#project div.visuel_projects div.container_projet.actif div.visuel-left,
-section#project div.visuel_projects div.container_projet.actif div.visuel-right {
-	transform: translateX(0);
-}
-
-section#project div.visuel_projects div#p1-left {
-	background: url(../img/p1_ctewind/LeftDesign.png) no-repeat;
-	background-size: cover;
-	background-size: 100% auto;
-}
-
-section#project div.visuel_projects div#p1-right {
-	background: url(../img/p1_ctewind/RightDesign.png) no-repeat;
-	background-size: cover;
-	background-size: 100% auto;
-}
-
-section#project div.visuel_projects div#p2-left {
-	background: url(../img/p2_clps/LeftDesign.png) no-repeat;
-	background-size: cover;
-	background-size: 100% auto;
-}
-
-section#project div.visuel_projects div#p2-right {
-	background: url(../img/p2_clps/RightDesign.png) no-repeat;
-	background-size: cover;
-	background-size: 100% auto;
-}
-
-section#project div.visuel_projects div.visuel-left {
-	transform: translateX(-50vW);
+section#project div.visuel_projects div#target1.actif img,
+section#project div.visuel_projects div#target2.actif img {
+	transform: translateY(0);
 	transition: 2s;
-	height: 50%;
-	width: 70%;
-	position: absolute;
-	top: 75%;
-	left: 0%;
-	z-index: 2;
-}
-
-section#project div.visuel_projects div.visuel-right {
-	transform: translateX(50vW);
-	transition: 1.5s;
-	height: 50%;
-	width: 50%;
-	position: absolute;
-	top: 40%;
-	right: 0%;
-	z-index: 1;
+	transition-timing-function: cubic-bezier(.17, .67, .83, .67);
+	/* opacity: 1; */
 }
 
 section#project div.description h1 {
@@ -382,16 +339,6 @@ section#project div.description_projet ul li div:hover span.select-project {
 
 section#project div.description_projet ul li h3 {
 	cursor: pointer;
-}
-
-section#project div.description_projet p {
-	opacity: 0;
-	font-style: italic;
-}
-
-section#project div.description_projet ul li.actif p {
-	opacity: 1;
-	transition: ease 0.3s;
 }
 
 /* Caractères spé */
