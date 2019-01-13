@@ -16,9 +16,14 @@
 	clear: both;
 }
 
+:root {
+	font-size: 62.5%;
+}
+
 body {
 	margin: 0;
 	width: 100vw;
+	font-size: 1.6rem;
 	overflow-x: hidden;
 	font-family: "Tilde", sans-serif;
 }
@@ -156,7 +161,7 @@ section#about div.container-visuel {
 	/* overflow: hidden; */
 }
 
-/* TEST */
+/* BLOC NOIR QUI TRANSLATE AU PREMIER SCROLL */
 section#about div.container-text {
 	position: relative;
 	overflow: hidden;
@@ -172,14 +177,16 @@ section#about div.container-text div.test {
 	transition: 800ms;
 }
 
-/* Anim js */
+/* Animation après le premier scroll */
 section#about.anim_test div.container-text div.test {
 	transform: translateX(-900px);
 }
 
+/* Apparition du contenu texte et image */
 section#about.anim_test div.container-text div.text,
 section#about.anim_test div.container-visuel div.visuel {
 	transform: translateY(0);
+	transform: translateZ(0);
 	transition-delay: 800ms;
 }
 
@@ -200,7 +207,7 @@ section#about div.container-text div.text {
 	justify-content: space-around;
 	padding: 50px;
 	height: 100%;
-	transform: translateY(700px);
+	transform: translateZ(700px);
 	transition: 0.5s;
 }
 
@@ -282,19 +289,23 @@ section#project div.visuel_projects div#target1 img:nth-child(3),
 section#project div.visuel_projects div#target2 img:nth-child(3) {
 	/* transition-timing-function: cubic-bezier(.17, .67, .83, .67); */
 	transform: translateY(-800px);
+	transition: 0.7s;
+	transition-timing-function: cubic-bezier(0, .69, 1, .65);
 	/* opacity: 0; */
 }
 
 section#project div.visuel_projects div#target1 img:nth-child(2),
 section#project div.visuel_projects div#target2 img:nth-child(2) {
 	transform: translateY(900px);
+	transition: 1s;
+	transition-timing-function: cubic-bezier(.17, .67, .83, .67);
 }
 
 section#project div.visuel_projects div#target1.actif img,
 section#project div.visuel_projects div#target2.actif img {
 	transform: translateY(0);
-	transition: 2s;
-	transition-timing-function: cubic-bezier(.17, .67, .83, .67);
+	transition: 1s;
+	transition-timing-function: cubic-bezier(0, .69, 1, .65);
 	/* opacity: 1; */
 }
 
@@ -341,6 +352,11 @@ section#project div.description_projet ul li h3 {
 	cursor: pointer;
 }
 
+section#project div.description_projet ul li a {
+	font-style: italic;
+}
+
+/* GENERAL */
 /* Caractères spé */
 /* CTA - télécharger cv */
 a.cta_body {
@@ -400,4 +416,20 @@ a.cta_body:after {
 .trait_titre span:nth-child(2) {
 	top: 2px;
 	background: #27F3EE;
+}
+
+/* Bouton pour le scroll vers page projet */
+div.arrow-1,
+div.arrow-2 {
+	text-orientation: mixed;
+	cursor: pointer;
+}
+
+div.arrow-1 {
+	writing-mode: vertical-lr;
+}
+
+div.arrow-2 {
+	width: 100%;
+	writing-mode: vertical-rl;
 }

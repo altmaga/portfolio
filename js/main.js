@@ -14,13 +14,24 @@ window.addEventListener("wheel", function(e) {
 	}
 });
 
+// Scroll animation portfolio
+var scrollFullPage = document.querySelector('.arrow-1');
+
+scrollFullPage.addEventListener('click', function() {
+	window.scroll({
+		top: window.innerHeight,
+		left: 0,
+		behavior: 'smooth',
+	});
+});
+
 // Animation Projets
 
 // Les projets
 var descProjets = document.querySelectorAll('.liste_projet');
 
 descProjets.forEach(function(event) {
-	event.addEventListener('mouseover', function() {
+	event.addEventListener('click', function() {
 		var target = event.dataset.target;
 		var myTarget = document.querySelector('#' + target);
 		myTarget.classList.toggle('actif');

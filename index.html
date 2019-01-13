@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<header>
+	<header id="header">
 		<a href="#" class="logo_accueil">
 			<img src="img/logoalice.svg" alt="Alice mouchard" class="logo">
 		</a>
@@ -27,7 +27,7 @@
 		<section id="about" class="container">
 			<div class="container-text">
 				<div class="test">
-					<img src="img/logoalice.svg" alt="Alice Mouchard" class="logo_center">
+					<!-- <img src="img/logoalice.svg" alt="Alice Mouchard" class="logo_center"> -->
 				</div>
 				<div class="text">
 					<div>
@@ -45,6 +45,9 @@
 					<div class="container_cta">
 						<a href="fichier/cv-alicemouchard.pdf" download="CV-Alice-Mouchard" class="download"><img src="img/cv-download.svg" alt="Telecharger cv"></a>
 						<a href="fichier/cv-alicemouchard.pdf" target="_blank" class="cta_body">Mon CV</a>
+					</div>
+					<div class="arrow-1">
+						<p>projets &rarr;</p>
 					</div>
 				</div>
 			</div>
@@ -66,7 +69,7 @@
 						<br />
 						Projets réalisés lors de mon stage dans <a href="https://www.ceasy.fr/">l'agence Ceasy</a>.
 					</h2>
-					<h2>Choisissez un projet</h2>
+					<p>Choisissez un projet</p>
 					<ul>
 						<li id="project-1" class="liste_projet" data-target="target1">
 							<div>
@@ -82,19 +85,22 @@
 							</div>
 							<a href="#">Voir le site</a>
 						</li>
-						<li id="project-3" class="liste_projet" data-target="target3">
+						<!-- <li id="project-3" class="liste_projet" data-target="target3">
 							<div>
 								<h3>Boucherie Clermont</h3>
 								<span class="select-project"></span>
 							</div>
 							<a href="#">Voir le site</a>
-						</li>
+						</li> -->
 					</ul>
+					<div class="arrow-2">
+						<p>&larr; a propos</p>
+					</div>
 				</div>
 				<!-- <div class="container_cta"><a href="" target="_blank" class="cta_body">Voir le site</a></div> -->
 			</div>
 			<div class="visuel_projects">
-				<div id="target1" class="container_projet">
+				<div id="target1" class="container_projet actif">
 					<img src="img/p1_ctewind/about.png" alt="">
 					<img src="img/p1_ctewind/home.png" alt="">
 					<img src="img/p1_ctewind/services.png" alt="">
@@ -110,11 +116,11 @@
 					<div id="p2-left" class="visuel-left"></div>
 					<div id="p2-right" class="visuel-right"></div> -->
 				</div>
-				<div id="target3" class="container_projet">
+				<!-- <div id="target3" class="container_projet">
 					<div id="p3-bg" class="visuel-bg"></div>
 					<div id="p3-left" class="visuel-left"></div>
 					<div id="p3-right" class="visuel-right"></div>
-				</div>
+				</div> -->
 			</div>
 		</section>
 	</main>
