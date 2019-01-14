@@ -28,6 +28,9 @@ body {
 	font-family: "Tilde", sans-serif;
 }
 
+/* html {
+	scroll-behavior: smooth;
+} */
 .wrapper {
 	width: 1200px;
 	margin: 0 auto;
@@ -36,7 +39,7 @@ body {
 .container {
 	height: 100vh;
 	width: 100vw;
-	padding: 0 40px 40px 40px;
+	padding: 0 40px;
 }
 
 a {
@@ -434,6 +437,17 @@ div.arrow-2 {
 	writing-mode: vertical-rl;
 }
 
+/* FOOTER */
+footer {
+	height: 40px;
+	width: inherit;
+	padding: 0 40px;
+	position: fixed;
+	background-color: #fff;
+	z-index: 3;
+	bottom: 0;
+}
+
 /* VERSION RESPONSIVE */
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {}
@@ -448,8 +462,28 @@ div.arrow-2 {
 @media only screen and (max-width : 576px) {}
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
-	section#about.anim_test div.container-text div.test {
+@media only screen and (max-width : 768px) {
+	section#project {
+		flex-direction: column;
+	}
+
+	section#project div.description, section#project div.visuel_projects {
+		width: 100vw;
+	}
+
+	section#project div.visuel_projects div.container_projet img {
+		width: 150px;
+	}
+
+	section#about div.container-visuel {
 		display: none;
+	}
+
+	section#about div.container-text {
+		width: 100vw;
+	}
+
+	section#about div.container-text div.test {
+		visibility: hidden;
 	}
 }

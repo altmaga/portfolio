@@ -49,29 +49,3 @@ descProjets.forEach(function(event) {
 	});
 
 });
-
-
-// p1.addEventListener('mouseover', function(event) {
-// 	p1.classList.add('actif');
-// 	p1Middle.classList.add('projet_actif');
-// 	p1Left.classList.add('visuel_actif');
-// 	p1Right.classList.add('visuel_actif');
-// 	//
-// 	p2Middle.classList.remove('projet_actif');
-// 	p2Middle.classList.remove('projet_actif');
-// 	p2.classList.remove('actif');
-// 	p2Left.classList.remove('visuel_actif');
-// 	p2Right.classList.remove('visuel_actif');
-// });
-//
-// p2.addEventListener('click', function(event) {
-// 	p2Middle.classList.add('projet_actif');
-// 	p2.classList.add('actif');
-// 	p2Left.classList.add('visuel_actif');
-// 	p2Right.classList.add('visuel_actif');
-// 	//
-// 	p1.classList.remove('actif');
-// 	p1Middle.classList.remove('projet_actif');
-// 	p1Left.classList.remove('visuel_actif');
-// 	p1Right.classList.remove('visuel_actif');
-// });
