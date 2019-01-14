@@ -404,7 +404,7 @@ a.cta_body:after {
 }
 
 .trait_titre span {
-	width: 800px;
+	width: 50vw;
 	height: 2px;
 	display: block;
 	background: #FE2C55;
@@ -432,4 +432,24 @@ div.arrow-1 {
 div.arrow-2 {
 	width: 100%;
 	writing-mode: vertical-rl;
+}
+
+/* VERSION RESPONSIVE */
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 576px) {}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	section#about.anim_test div.container-text div.test {
+		display: none;
+	}
 }

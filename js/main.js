@@ -15,11 +15,20 @@ window.addEventListener("wheel", function(e) {
 });
 
 // Scroll animation portfolio
-var scrollFullPage = document.querySelector('.arrow-1');
+var scrollFullPageDown = document.querySelector('.arrow-1');
+var scrollFullPageUp = document.querySelector('.arrow-2');
 
-scrollFullPage.addEventListener('click', function() {
+scrollFullPageDown.addEventListener('click', function() {
 	window.scroll({
 		top: window.innerHeight,
+		left: 0,
+		behavior: 'smooth',
+	});
+});
+
+scrollFullPageUp.addEventListener('click', function() {
+	window.scroll({
+		top: -window.innerHeight,
 		left: 0,
 		behavior: 'smooth',
 	});
