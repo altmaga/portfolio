@@ -483,6 +483,10 @@ footer {
 		width: 100vw;
 	}
 
+	section#about div.container-text div.text {
+		padding: 20px;
+	}
+
 	section#about div.container-text div.test {
 		visibility: hidden;
 	}
